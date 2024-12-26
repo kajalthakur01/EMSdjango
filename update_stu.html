@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- <h1 id="c">Register new employee</h1> -->
+<h1>Register update Student</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <label >name: </label><input type="text" name="name" value={{stu.name}} required><br>
+    <label >course: </label><input type="text" name="course" value={{stu.course}} required><br>
+    <label >rollno: </label><input type="number" name="rollno" value={{stu.rollno}} required><br>
+    <label >age: </label><input type="number" name="age" value={{stu.age}}  required><br>
+    <button type="submit">update Student</button>
+
+</form>
+
+{% endblock %}

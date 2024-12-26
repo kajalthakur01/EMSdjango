@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- <h1 id="c">Register new employee</h1> -->
+<h1>Register add Student</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <label >name: </label><input type="text" name="name" required><br>
+    <label >department: </label><input type="text" name="course" required><br>
+    <label >salary: </label><input type="number" name="rollno" required><br>
+    <label >age: </label><input type="number" name="age" required><br>
+    <button type="submit">Add Student</button>
+
+</form>
+
+{% endblock %}
